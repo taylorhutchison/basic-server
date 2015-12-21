@@ -61,4 +61,45 @@ router.get('/states', function(request, response){
       ]);
 });
 
+router.get('/people', function(request, response){
+   response.json([
+       {
+           name: 'Adam',
+           age: 20,
+           gender: 'Male'
+       },
+       {
+           name: 'Brad',
+           age: 63,
+           gender: 'Male'
+       },
+       {
+           name: 'Chris',
+           age: 34,
+           gender: 'Male'
+       },
+       {
+           name: 'Daphne',
+           age: 19,
+           gender: 'Female'
+       },
+       {
+           name: 'Elli',
+           age: 25,
+           gender: 'Female'
+       },
+       {
+           name: 'Finn',
+           age: 15,
+           gender: 'Male'
+       },
+       {
+           name: 'Garrett',
+           age: 36,
+           gender: 'Male'
+       }
+
+   ]);
+});
+
 module.exports = router;
