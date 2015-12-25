@@ -101,5 +101,14 @@ router.get('/people', function(request, response){
 
    ]);
 });
-
+router.get('/error', function(request, response){;
+    response.status(400);
+    response.send();
+});
+router.get('/http*', function(request, response){
+    if(/^\/\d{3}$/.test(request.params[0])){
+        response.status(parseInt(request.params[0].match(/\d{3}/)[0]));
+    }
+    response.send(request.params[0]);
+});
 module.exports = router;
