@@ -114,4 +114,15 @@ router.get('/http*', function(request, response){
     response.send(request.params[0]);
 });
 
+router.get('/flaky*', function(request, response){
+    if(Math.floor(Math.random() * 2)==1){
+        response.json({message:'The flaky API worked!'});
+    }
+    else
+    {
+        response.status(400);
+        response.send();
+    }
+});
+
 module.exports = router;
