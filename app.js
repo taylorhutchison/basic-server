@@ -36,7 +36,6 @@ process.argv.forEach(function (val, index, array) {
 
 app.use('/', routes);
 app.use('/api', api);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
